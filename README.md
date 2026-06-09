@@ -121,7 +121,7 @@ HDF / HDF5  →  Lat-Lon crop  →  Temporal sync  →  Bilinear resize (320×32
 
 **Training & Validation Loss**
 
-<img src="loss_curve.png" alt="Training and Validation Loss" width="100%"/>
+<img src="logs/loss_curve.png" alt="Training and Validation Loss" width="100%"/>
 
 Validation loss stabilised near **0.13** from epoch 18, with minimal train/val gap — no severe overfitting.
 
@@ -130,7 +130,7 @@ Validation loss stabilised near **0.13** from epoch 18, with minimal train/val g
 
 **SSIM & Pearson Correlation**
 
-<img src="correlation_metrics.png" alt="SSIM and Pearson Correlation" width="100%"/>
+<img src="logs/correlation_metrics.png" alt="SSIM and Pearson Correlation" width="100%"/>
 
 SSIM climbed from **0.11 → 0.68** over 18 epochs. Most gain occurred in epochs 5–15 as the model began producing spatially coherent outputs.
 
@@ -141,7 +141,7 @@ SSIM climbed from **0.11 → 0.68** over 18 epochs. Most gain occurred in epochs
 
 **MAE & RMSE**
 
-<img src="error_metrics.png" alt="MAE and RMSE" width="100%"/>
+<img src="logs/error_metrics.png" alt="MAE and RMSE" width="100%"/>
 
 MAE converged to **~0.015** (normalised), RMSE to **~0.042** — sharp drop in first 4 epochs then gradual refinement.
 
@@ -150,7 +150,7 @@ MAE converged to **~0.015** (normalised), RMSE to **~0.042** — sharp drop in f
 
 **Critical Success Index (Multi-Threshold)**
 
-<img src="csi_curves.png" alt="CSI at multiple thresholds" width="100%"/>
+<img src="logs/csi_curves.png" alt="CSI at multiple thresholds" width="100%"/>
 
 CSI@0.2 trends upward through training. CSI@0.4 and CSI@0.6 remain near zero — reflecting the challenge of predicting intense, localised rainfall cores.
 
@@ -177,7 +177,7 @@ CSI@0.2 trends upward through training. CSI@0.4 and CSI@0.6 remain near zero —
 Prediction panels at Epochs 0, 5, and 10 — showing the model's evolution from near-uniform outputs to spatially structured precipitation fields:
 
 <div align="center">
-<img src="WhatsApp_Image_2026-05-15_at_2_32_18_AM__1_.jpeg" alt="Prediction panels at Epoch 0, 5, and 10" width="90%"/>
+<img src="logs/output.jpeg" alt="Prediction panels at Epoch 0, 5, and 10" width="90%"/>
 
 *Left to right per row: Last WV Input · Ground Truth · Predicted · Absolute Error*
 </div>
