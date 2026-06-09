@@ -293,62 +293,27 @@ with torch.no_grad():
     pred = model(wv_seq)   # → (1, 1, 320, 320)
 ```
 
----
 
-## 📁 Project Structure
-
-```
-cloudburst-investigation/
-│
-├── data/
-│   ├── preprocess.py          # HDF → PNG pipeline
-│   └── dataset.py             # PyTorch Dataset + sliding window
-│
-├── model/
-│   ├── encoder.py             # CNN encoder (4-stage, skip connections)
-│   ├── convlstm.py            # ConvLSTM cell & stacked module
-│   ├── decoder.py             # U-Net decoder with transpose convolutions
-│   └── cloudburst_net.py      # Full model assembly
-│
-├── loss/
-│   └── combined_loss.py       # MAE + weighted MAE + SSIM
-│
-├── train.py                   # Training loop, checkpointing, early stopping
-├── evaluate.py                # Metrics computation & visualisation
-├── requirements.txt
-└── README.md
-```
-
----
 
 ## 🔮 Future Work
 
 - **Attention mechanisms** — spatial self-attention + cross-frame temporal attention to focus on active convective cells
 - **Transformer temporal encoder** — replace ConvLSTM with a spatiotemporal transformer for longer-range dependencies
 - **GAN post-processing** — adversarial sharpening to push predicted intensities beyond the current smoothness bias
-- **Multi-channel input** — add INSAT-3DR visible, SWIR, and TIR channels for richer convective information
+- **Multi-channel input** — add INSAT-3DR  SWIR, and TIR channels for richer convective information
 - **Probabilistic forecasting** — Monte Carlo dropout / ensemble training to produce calibrated uncertainty maps
 - **Expanded dataset** — cover more seasons and geographic sub-regions to reduce event-level overfitting
 
 ---
 
-## 📚 References
 
-1. Shi, X. et al. (2015) *ConvLSTM Network: A Machine Learning Approach for Precipitation Nowcasting.* NeurIPS.
-2. Ronneberger, O., Fischer, P. and Brox, T. (2015) *U-Net: Convolutional Networks for Biomedical Image Segmentation.* MICCAI.
-3. Wang, Z. et al. (2004) *Image Quality Assessment: From Error Visibility to Structural Similarity.* IEEE TIP.
-4. Huffman, G.J. et al. (2020) *GPM IMERG Technical Documentation.* NASA/GSFC.
-5. Ravuri, S. et al. (2021) *Skilful Precipitation Nowcasting Using Deep Generative Models of Radar.* Nature, 597.
-6. Loshchilov, I. and Hutter, F. (2019) *Decoupled Weight Decay Regularization.* ICLR.
-
----
 
 ## 🏛️ Institution
 
 <div align="center">
 
 **Indian Institute of Information Technology Kalyani**
-*B.Tech Computer Science and Engineering — 2024*
+*B.Tech Computer Science and Engineering — 2026*
 
 Supervised by **Dr. Uma Das**, Assistant Professor, Physics
 
