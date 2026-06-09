@@ -24,9 +24,7 @@
 - [Quantitative Metrics](#-quantitative-metrics)
 - [Installation](#-installation)
 - [Usage](#-usage)
-- [Project Structure](#-project-structure)
 - [Future Work](#-future-work)
-- [References](#-references)
 
 ---
 
